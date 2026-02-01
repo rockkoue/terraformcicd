@@ -1,9 +1,9 @@
 # Création du bucket S3
 resource "aws_s3_bucket" "website_bucket" {
-  bucket = "lecloudfacile-rockkoue-225" # Remplacez par un nom unique
+  bucket = "lecloudfacile-rockkoue-5-225" # Remplacez par un nom unique
 }
 
-# # Politique du bucket pour permettre l'accès public en lecture
+# # Politique du bucket pour permettre l'accès public en lectures
 resource "aws_s3_bucket_policy" "website_bucket_policy" {
   depends_on = [ aws_s3_bucket_public_access_block.website ]
   bucket = aws_s3_bucket.website_bucket.id
